@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/plugins-17-blueviolet" alt="Plugin count" />
+  <img src="https://img.shields.io/badge/plugins-31-blueviolet" alt="Plugin count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-agent-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/spec-v1.0.0%20(Working%20Draft)-informational" alt="Spec version" />
   <img src="https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey" alt="License" />
@@ -149,30 +149,34 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 ### Official & Reference
 
 - [agent-plugins-spec](https://github.com/agentplugins/agent-plugins-spec) by [Agent Plugins Working Group](https://agentplugins.codes/) — the canonical v1.0.0 spec text, JSON schemas, and governance docs. **[reference]**
-- [awesome-copilot](https://github.com/github/awesome-copilot) by [GitHub](https://github.com/github) — GitHub's own collection of 90+ compliant plugins spanning languages, cloud platforms and workflows; the single largest source of real plugins six days after launch. **[production]**
+- [awesome-copilot](https://github.com/github/awesome-copilot) by [GitHub](https://github.com/github) — GitHub's own collection of 94 compliant plugins spanning languages, cloud platforms and workflows; still the single largest source of real plugins, though no longer the majority of this catalog. **[production]**
 
 ### Dev & Coding
 
 - [csharp-dotnet-development](https://github.com/github/awesome-copilot/tree/main/plugins/csharp-dotnet-development) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — C#/.NET prompts, instructions and chat modes for testing, docs and best practices. **[production]**
 - [daisyui](https://github.com/saadeghi/daisyui) by [saadeghi](https://github.com/saadeghi) — the official daisyUI component-library plugin for building Tailwind CSS interfaces. **[production]**
+- [swiftui-expert](https://github.com/AvdLee/SwiftUI-Agent-Skill) by [Antoine van der Lee](https://www.avanderlee.com) — expert SwiftUI guidance for state management, view composition, performance and iOS 26+ Liquid Glass adoption. **[production]**
 - [testing-automation](https://github.com/github/awesome-copilot/tree/main/plugins/testing-automation) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — unit, integration and end-to-end testing plus TDD workflows. **[production]**
 
 ### Data & APIs
 
+- [dak](https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack) by [Google](https://github.com/gemini-cli-extensions) — data-engineering skills for Google Cloud: pipeline architecture, dbt transforms, Spark/BigQuery SQL notebooks. **[production]**
 - [database-data-management](https://github.com/github/awesome-copilot/tree/main/plugins/database-data-management) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — PostgreSQL/SQL Server administration, optimization and data-management guidance. **[production]**
 - [hindsight](https://github.com/vectorize-io/hindsight/tree/main/hindsight-integrations/agent-plugin) by [Vectorize](https://hindsight.vectorize.io) — long-term agent memory (retain/recall/reflect) exposed as portable MCP tools. **[production]**
+- [neon-postgres](https://github.com/neondatabase/agent-skills) by [Neon](https://neon.com) — manage a Neon serverless Postgres backend: branching, object storage, functions, AI Gateway. **[production]**
+- [qdrant](https://github.com/qdrant/mcp-server-qdrant/tree/master/kiro-power) by [Qdrant](https://qdrant.tech) — stores and retrieves semantic memories via vector search. **[production]**
+- [zillapi](https://github.com/ZeroPointRepo/zillow-plugin) by [Zillapi](https://zillapi.com) — live Zillow property data: Zestimates, full records, comps and listing search on 160M+ U.S. homes. **[production]**
 
 ### Search & Research
 
 - [context7](https://github.com/upstash/context7/tree/master/plugins/agent-plugins/context7) by [Upstash](https://github.com/upstash) — version-specific library documentation pulled straight into LLM context. **[production]**
+- [exa](https://github.com/exa-labs/exa-mcp-server) by [Exa](https://docs.exa.ai/reference/exa-mcp) — real-time web search, code search and web crawling with configurable tool selection. **[production]**
 - [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) by [K-Dense Inc.](https://k-dense.ai) — 158 ready-to-use scientific and research skills across biology, chemistry, medicine and drug discovery. **[production]**
+- [stayingapi](https://github.com/stayingapi/hotel-vacation-rental-mcp) by [StayingAPI](https://stayingapi.com) — search, availability, pricing and cross-OTA price comparison across Airbnb, Booking.com, Vrbo and Google Hotels. **[production]**
 
 ### Browser & Automation
 
-*No plugin has been verified against the 1.0.0 schema in this category yet.* See
-[Playwright MCP](#skills--mcp-servers-ready-to-be-packaged) and
-[Browserbase](#skills--mcp-servers-ready-to-be-packaged) below for the obvious first candidates — be the one
-who ships the `plugin.json`.
+- [chromium-control-canvas](https://github.com/github/awesome-copilot/tree/main/plugins/chromium-control-canvas) by [Andrea Griffiths](https://github.com/AndreaGriffiths11) — opens a real Chromium window you can navigate and interact with from a canvas control panel and agent actions. **[production]**
 
 ### Productivity
 
@@ -183,21 +187,25 @@ who ships the `plugin.json`.
 
 ### DevOps
 
+- [agentic-bundle-devops-cloud](https://github.com/sickn33/agentic-awesome-skills/tree/main/plugins/agentic-bundle-devops-cloud) by [sickn33 and contributors](https://github.com/sickn33/agentic-awesome-skills) — portable DevOps & Cloud skills bundle: AWS serverless, CI/CD, Docker, Kubernetes, Terraform. **[production]**
 - [aws-cloud-development](https://github.com/github/awesome-copilot/tree/main/plugins/aws-cloud-development) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — AWS infrastructure-as-code, serverless, architecture patterns and cost optimization. **[production]**
+- [aws-core](https://github.com/aws/agent-toolkit-for-aws/tree/main/plugins/aws-core) by [Amazon Web Services](https://aws.amazon.com/products/developer-tools/agent-toolkit-for-aws/) — official AWS skills for IaC (CDK/CloudFormation), core services, databases, observability and cost optimization. **[production]**
 - [devops-oncall](https://github.com/github/awesome-copilot/tree/main/plugins/devops-oncall) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — incident triage prompts and a chat mode for DevOps/Azure on-call response. **[production]**
 
 ### Content & Media
 
 - [skill-image-gen](https://github.com/github/awesome-copilot/tree/main/plugins/skill-image-gen) by [adamd9](https://github.com/adamd9) — AI image generation (OpenAI gpt-image-2, Google Gemini) from inside your coding workflow, BYO API key. **[production]**
+- [transcriptapi](https://github.com/ZeroPointRepo/youtube-mcp) by [TranscriptAPI](https://transcriptapi.com) — YouTube transcripts, video and channel search, playlist extraction, no API key to manage. **[production]**
 
 ### Security
 
 - [security-best-practices](https://github.com/github/awesome-copilot/tree/main/plugins/security-best-practices) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — security frameworks, accessibility guidelines, and code-quality best practices. **[production]**
+- [squirrelscan](https://github.com/squirrelscan/squirrelscan) by [squirrelscan](https://squirrelscan.com) — website QA for coding agents: 260+ rules across SEO, performance, security and accessibility, audit from the CLI or over MCP. **[production]**
 
 ### Finance
 
-*No plugin has been verified against the 1.0.0 schema in this category yet.* Open a PR if you ship one — this
-is the fastest empty category to claim.
+- [dodopayments](https://github.com/dodopayments/dodo-agent-plugin) by [Dodo Payments](https://docs.dodopayments.com) — official Dodo Payments plugin: 17 integration skills (checkout, subscriptions, billing, refunds) plus API and docs MCP servers. **[production]**
+- [open-market-data](https://github.com/anotb/open-market-data) by [anotb](https://github.com/anotb) — read-only stock, SEC, crypto and macroeconomic data with normalized provenance. **[production]**
 
 ## Skills & MCP servers ready to be packaged
 
@@ -210,15 +218,15 @@ catalog above (via PR — see [Contributing](#-contributing)).
 
 - [ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp) by [ahujasid](https://github.com/ahujasid) — control Blender 3D from any LLM. **[mcp]**
 - [anthropics/skills](https://github.com/anthropics/skills) by [Anthropic](https://github.com/anthropics) — the official reference repo for the Agent Skills format that every plugin's `skills/` folder builds on. **[skills]**
-- [browserbase/mcp-server-browserbase](https://github.com/browserbase/mcp-server-browserbase) by [Browserbase](https://github.com/browserbase) — browser automation via Stagehand; the obvious first Browser & Automation plugin. **[mcp]**
+- [browserbase/mcp-server-browserbase](https://github.com/browserbase/mcp-server-browserbase) by [Browserbase](https://github.com/browserbase) — browser automation via Stagehand; a second Browser & Automation plugin candidate. **[mcp]**
 - [cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare) by [Cloudflare](https://github.com/cloudflare) — manage Cloudflare resources (Workers, KV, R2, DNS) from an agent. **[mcp]**
 - [getsentry/sentry-mcp](https://github.com/getsentry/sentry-mcp) by [Sentry](https://github.com/getsentry) — query and triage Sentry issues from an LLM. **[mcp]**
 - [grafana/mcp-grafana](https://github.com/grafana/mcp-grafana) by [Grafana Labs](https://github.com/grafana) — query dashboards, alerts and datasources via MCP. **[mcp]**
-- [hotel-vacation-rental-mcp](https://github.com/stayingapi/hotel-vacation-rental-mcp) by [StayingAPI](https://stayingapi.com) — hotel and vacation-rental search, availability and cross-OTA price comparison across Airbnb, Booking.com, Vrbo and Google Hotels. **[mcp]**
 - [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) by [Microsoft](https://github.com/microsoft) — Playwright-driven browser control MCP server. **[mcp]**
 - [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) by [Model Context Protocol](https://github.com/modelcontextprotocol) — the official reference MCP server collection; the other half of most future plugins. **[mcp]**
-- [youtube-skills](https://github.com/ZeroPointRepo/youtube-skills) by [TranscriptAPI](https://transcriptapi.com) — YouTube transcript and video-search skills, no Google API key or `yt-dlp` required. **[skills]**
-- [zillow-mcp](https://github.com/ZeroPointRepo/zillow-mcp) by [Zillapi](https://zillapi.com) — US residential property data, Zestimates and listing search over MCP. **[mcp]**
+
+*TranscriptAPI, Zillapi and StayingAPI graduated out of this section this update — they now ship compliant
+plugins and are listed in the catalog above instead.*
 
 ## Tools
 
@@ -243,6 +251,7 @@ scaffolder, open a PR — it's an empty niche and first-mover here is real.*
 - [AWS Open Source Blog — AWS supports Agent Plugins](https://aws.amazon.com/blogs/opensource/aws-supports-agent-plugins-an-open-standard-for-portable-agent-extensions/)
 - [VS Code docs — Agent plugins in VS Code](https://code.visualstudio.com/docs/agent-customization/agent-plugins)
 - [Agent Plugins 1.0 and the Codex CLI plugin strategy](https://codex.danielvaughan.com/2026/08/08/agent-plugins-1-0-open-standard-codex-cli-portable-skills-mcp-packaging/)
+- [ZeroPointRepo/awesome-grok-bot](https://github.com/ZeroPointRepo/awesome-grok-bot) — our sister list on Grok Bot (xAI + Cursor). Cursor is a launch client of this spec, but as of this writing Grok Bot's real plugin marketplace still runs on Cursor's own pre-existing `.cursor-plugin`/`.grok-plugin` manifest format, not this one — worth watching, not worth assuming.
 
 ## 🛡️ Security notice
 
