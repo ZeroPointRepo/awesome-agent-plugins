@@ -1,0 +1,51 @@
+name: Suggest a new entry
+description: Suggest a plugin, skill, or MCP server to add to the list
+title: "[Add]: "
+labels: ["new-entry"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: The plugin/skill/MCP server's name
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Repository URL
+      description: Link to the folder containing plugin.json (or the skill/MCP server repo root)
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it?
+      options:
+        - Compliant Agent Plugin (has a valid plugin.json)
+        - Agent Skill only (no plugin.json yet)
+        - MCP server only (no plugin.json yet)
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Suggested category
+      description: e.g. Dev & Coding, Data & APIs, Search & Research, Browser & Automation, Productivity, DevOps, Content & Media, Security, Finance
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: One-line description
+      description: Plain, no marketing language — what does it do?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I validated plugin.json against the canonical schema (if applicable)
+        - label: This isn't already listed in the README
+        - label: I'm not the author, or I've disclosed that I am in the description above

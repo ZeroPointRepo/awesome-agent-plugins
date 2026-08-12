@@ -1,0 +1,29 @@
+name: Report a broken entry
+description: Flag a dead link, invalid manifest, or archived repo in the list
+title: "[Broken]: "
+labels: ["broken-entry"]
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      description: Name or link exactly as it appears in the README
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: What's wrong?
+      options:
+        - Link is dead (404 / repo deleted or made private)
+        - Repo archived / clearly abandoned
+        - plugin.json is missing or no longer validates against the schema
+        - Description is inaccurate
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Anything that helps us confirm and fix it faster (error output, screenshot, etc.)
