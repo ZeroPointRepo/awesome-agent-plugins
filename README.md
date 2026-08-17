@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/plugins-31-blueviolet" alt="Plugin count" />
+  <img src="https://img.shields.io/badge/plugins-33-blueviolet" alt="Plugin count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-agent-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/spec-v1.0.0%20(Working%20Draft)-informational" alt="Spec version" />
   <img src="https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey" alt="License" />
@@ -132,16 +132,29 @@ If you run one of the `❓` cells day to day, open a PR — a one-line source li
 
 ## ⭐ Plugin of the Week
 
-**[context7](https://github.com/upstash/context7/tree/master/plugins/agent-plugins/context7)** by
-[Upstash](https://github.com/upstash) — pulls version-specific library documentation straight into your
-agent's context instead of letting it guess API shapes from stale training data. It ships a real `mcp.json`
-(one `streamable-http` server) plus a `skills/` entry, and it's one of the first production plugins verified
-against the 1.0.0 schema outside the launch clients' own repos. Install: point your client at the
-`plugins/agent-plugins/context7` folder in the repo above.
+**[sentry](https://github.com/getsentry/sentry-for-ai/tree/main/src/plugins/agent-plugin)** by
+[Sentry](https://sentry.io) — the plugin that made this week interesting: Sentry is the first major
+observability vendor to publish a manifest carrying the canonical
+`https://agent-plugins.org/schemas/1.0.0/plugin.schema.json` `$schema`, rather than yet another stack of
+per-client folders. Practically, it teaches your agent to wire up Sentry in a new project, then pull a real
+production stack trace and debug from it instead of from your description of the bug — the gap between
+"tests pass locally" and "it's broken for 4% of users" is exactly where an agent is otherwise blind.
+Install: point a compliant client at `src/plugins/agent-plugin` in the repo above.
 
 *Rotates weekly. Nominate an entry by opening an issue with the `pick-of-the-week` label.*
 
 ## The catalog
+
+> **Adoption reality check — verified 2026-08-17.** We scanned the manifests of 34 major vendor skill/MCP
+> repositories. Most ship **per-client** manifests — `.claude-plugin/`, `.cursor-plugin/`, `.codex-plugin/`,
+> `.grok-plugin/` — rather than one portable open-spec `plugin.json`. Vercel, Cloudflare, Stripe, Railway,
+> MongoDB, Wix, Axiom, Chrome DevTools and Superpowers all currently do this. Only a handful publish a manifest
+> carrying the canonical `$schema` of `https://agent-plugins.org/schemas/1.0.0/plugin.schema.json` — Sentry,
+> Neon, Upstash's context7, Qdrant and the spec's own example among them.
+>
+> Every entry in this catalog is checked for that `$schema`, which is why this list is shorter than a link dump
+> would be. You can verify any entry yourself by opening its `plugin.json`. Know one we've missed? Please
+> [open a PR](#-contributing).
 
 Format: `- [name](repo-url) by [author](author-url) — one-line description. **[tag]**`
 Tags: **production** (used in the wild) · **beta** · **experimental** · **reference** (spec/example, not meant to run standalone)
@@ -149,6 +162,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 ### Official & Reference
 
 - [agent-plugins-spec](https://github.com/agentplugins/agent-plugins-spec) by [Agent Plugins Working Group](https://agentplugins.codes/) — the canonical v1.0.0 spec text, JSON schemas, and governance docs. **[reference]**
+- [agent-plugins-example](https://github.com/agentplugins/agent-plugins-example) by [Agent Plugins Working Group](https://agentplugins.codes/) — the canonical v1 example plugin and migration guide; the fastest way to see a compliant layout end to end. **[reference]**
 - [awesome-copilot](https://github.com/github/awesome-copilot) by [GitHub](https://github.com/github) — GitHub's own collection of 94 compliant plugins spanning languages, cloud platforms and workflows; still the single largest source of real plugins, though no longer the majority of this catalog. **[production]**
 
 ### Dev & Coding
@@ -191,6 +205,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 - [aws-cloud-development](https://github.com/github/awesome-copilot/tree/main/plugins/aws-cloud-development) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — AWS infrastructure-as-code, serverless, architecture patterns and cost optimization. **[production]**
 - [aws-core](https://github.com/aws/agent-toolkit-for-aws/tree/main/plugins/aws-core) by [Amazon Web Services](https://aws.amazon.com/products/developer-tools/agent-toolkit-for-aws/) — official AWS skills for IaC (CDK/CloudFormation), core services, databases, observability and cost optimization. **[production]**
 - [devops-oncall](https://github.com/github/awesome-copilot/tree/main/plugins/devops-oncall) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — incident triage prompts and a chat mode for DevOps/Azure on-call response. **[production]**
+- [sentry](https://github.com/getsentry/sentry-for-ai/tree/main/src/plugins/agent-plugin) by [Sentry](https://sentry.io) — set up Sentry, debug production issues from real stack traces, and configure alerting and release health from the agent. **[production]**
 
 ### Content & Media
 
@@ -209,7 +224,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 ## Skills & MCP servers ready to be packaged
 
-The Agent Plugins ecosystem is six days old at the time of writing, so most of the world's best Agent Skills
+The Agent Plugins ecosystem is eleven days old at the time of writing, so most of the world's best Agent Skills
 and MCP servers **aren't plugins yet** — they just need a `plugin.json` dropped on top. This section is not
 the catalog above: nothing here has shipped a compliant manifest. It's a punch list of high-quality, real,
 maintained skills/MCP servers that would make excellent plugins, listed here so day-one readers still get
@@ -218,15 +233,14 @@ catalog above (via PR — see [Contributing](#-contributing)).
 
 - [ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp) by [ahujasid](https://github.com/ahujasid) — control Blender 3D from any LLM. **[mcp]**
 - [anthropics/skills](https://github.com/anthropics/skills) by [Anthropic](https://github.com/anthropics) — the official reference repo for the Agent Skills format that every plugin's `skills/` folder builds on. **[skills]**
-- [browserbase/mcp-server-browserbase](https://github.com/browserbase/mcp-server-browserbase) by [Browserbase](https://github.com/browserbase) — browser automation via Stagehand; a second Browser & Automation plugin candidate. **[mcp]**
+- [browserbase/skills](https://github.com/browserbase/skills) by [Browserbase](https://github.com/browserbase) — official agent skills for driving a real browser via Stagehand; a second Browser & Automation plugin candidate. **[mcp]**
 - [cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare) by [Cloudflare](https://github.com/cloudflare) — manage Cloudflare resources (Workers, KV, R2, DNS) from an agent. **[mcp]**
-- [getsentry/sentry-mcp](https://github.com/getsentry/sentry-mcp) by [Sentry](https://github.com/getsentry) — query and triage Sentry issues from an LLM. **[mcp]**
 - [grafana/mcp-grafana](https://github.com/grafana/mcp-grafana) by [Grafana Labs](https://github.com/grafana) — query dashboards, alerts and datasources via MCP. **[mcp]**
 - [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) by [Microsoft](https://github.com/microsoft) — Playwright-driven browser control MCP server. **[mcp]**
 - [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) by [Model Context Protocol](https://github.com/modelcontextprotocol) — the official reference MCP server collection; the other half of most future plugins. **[mcp]**
 
-*TranscriptAPI, Zillapi and StayingAPI graduated out of this section this update — they now ship compliant
-plugins and are listed in the catalog above instead.*
+*Sentry graduated out of this section on 2026-08-17 — `getsentry/sentry-for-ai` now ships a compliant
+`plugin.json` and is listed in the catalog above. TranscriptAPI, Zillapi and StayingAPI graduated earlier.*
 
 ## Tools
 
