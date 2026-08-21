@@ -233,9 +233,8 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 The Agent Plugins ecosystem is eleven days old at the time of writing, so most of the world's best Agent Skills
 and MCP servers **aren't plugins yet** — they just need a `plugin.json` dropped on top. This section is not
 the catalog above: nothing here has shipped a compliant manifest. It's a punch list of high-quality, real,
-maintained skills/MCP servers that would make excellent plugins, listed here so day-one readers still get
-something useful instead of an empty repo. Once one of these ships a `plugin.json`, it graduates to the
-catalog above (via PR — see [Contributing](#-contributing)).
+maintained skills/MCP servers that would make excellent plugins. Once one of these ships a `plugin.json`,
+it graduates to the catalog above (via PR — see [Contributing](#-contributing)).
 
 - [ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp) by [ahujasid](https://github.com/ahujasid) — control Blender 3D from any LLM. **[mcp]**
 - [anthropics/skills](https://github.com/anthropics/skills) by [Anthropic](https://github.com/anthropics) — the official reference repo for the Agent Skills format that every plugin's `skills/` folder builds on. **[skills]**
