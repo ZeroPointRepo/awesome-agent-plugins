@@ -7,30 +7,36 @@
   <img src="https://img.shields.io/badge/plugins-33-blueviolet" alt="Plugin count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-agent-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/spec-v1.0.0%20(Working%20Draft)-informational" alt="Spec version" />
+  <img src="https://img.shields.io/badge/status-unofficial-lightgrey" alt="Unofficial, not affiliated with the Agent Plugins Working Group" />
   <img src="https://img.shields.io/badge/license-CC%20BY%204.0-lightgrey" alt="License" />
 </p>
 
-<p align="center">
-  <b>A curated, verified directory for <a href="https://agentplugins.codes/">Agent Plugins</a></b> — the open,
-  vendor-neutral standard (published 2026-08-06 by Amazon, Anysphere/Cursor, GitHub, Microsoft, OpenAI and Vercel,
-  with Google as a core maintainer) that bundles <b>Agent Skills + MCP servers</b> into one portable,
-  drop-in folder. Every entry below is checked against a live <code>plugin.json</code> — no link dumps, no dead repos.
-</p>
+# Awesome Agent Plugins
+
+**A curated, verified directory of 33 Agent Plugins.** [Agent Plugins](https://agentplugins.codes/) is the
+open, vendor-neutral standard published on 2026-08-06 by Amazon, Anysphere/Cursor, GitHub, Microsoft, OpenAI
+and Vercel, with Google as a core maintainer. It bundles **Agent Skills and MCP servers** into one portable,
+drop-in folder that every compliant client can read.
+
+Every entry below is checked against a live `plugin.json` carrying the canonical 1.0.0 `$schema`. No link
+dumps, no dead repos, and no per-client manifests dressed up as open-standard plugins. This is an unofficial,
+community-maintained list and is not affiliated with the Agent Plugins Working Group.
 
 ---
 
 ## Contents
 
 - [What is an Agent Plugin?](#what-is-an-agent-plugin)
-- [Quickstart: build your first plugin in 5 minutes](#quickstart-build-your-first-plugin-in-5-minutes)
-- [Client support matrix](#client-support-matrix)
+- [Quickstart: build your first Agent Plugin in 5 minutes](#quickstart-build-your-first-agent-plugin-in-5-minutes)
+- [Client support matrix: which clients support Agent Plugins](#client-support-matrix-which-clients-support-agent-plugins)
 - [⭐ Plugin of the Week](#-plugin-of-the-week)
-- [The catalog](#the-catalog)
-- [Skills & MCP servers ready to be packaged](#skills--mcp-servers-ready-to-be-packaged)
-- [Tools](#tools)
-- [Spec & resources](#spec--resources)
+- [The catalog: verified Agent Plugins](#the-catalog-verified-agent-plugins)
+- [Agent Skills and MCP servers ready to be packaged as plugins](#agent-skills-and-mcp-servers-ready-to-be-packaged-as-plugins)
+- [Tools: validate and scaffold a plugin](#tools-validate-and-scaffold-a-plugin)
+- [Agent Plugins spec and resources](#agent-plugins-spec-and-resources)
 - [🛡️ Security notice](#️-security-notice)
 - [🤝 Contributing](#-contributing)
+- [Related lists](#related-lists)
 
 ---
 
@@ -73,7 +79,7 @@ maintainer) owns that layer itself. It also enforces real security boundaries: e
 resolve inside the plugin root (symlink escapes are rejected), `command` in `mcp.json` is a single executable
 token that is never shell-interpolated, and there's no portable field for embedding credentials.
 
-## Quickstart: build your first plugin in 5 minutes
+## Quickstart: build your first Agent Plugin in 5 minutes
 
 ```bash
 mkdir -p hello-plugin/skills/say-hello
@@ -109,9 +115,9 @@ npx -y ajv-cli@5 validate --spec=draft2020 \
 
 Point a compliant client at the `hello-plugin/` folder (in VS Code: **Chat: Install Plugin From Source**) and
 you have a working plugin — no `mcp.json` required, since it's optional. Add one when you actually need an MCP
-server; see [`upstash/context7`](#the-catalog) below for a real `mcp.json` in production.
+server; see [`upstash/context7`](#the-catalog-verified-agent-plugins) below for a real `mcp.json` in production.
 
-## Client support matrix
+## Client support matrix: which clients support Agent Plugins
 
 Verified against each vendor's own docs/announcement as of 2026-08-12. `✅` confirmed · `❓` not yet confirmed in
 public docs — please open a PR with a source if you can confirm it.
@@ -143,7 +149,7 @@ Install: point a compliant client at `src/plugins/agent-plugin` in the repo abov
 
 *Rotates weekly. Nominate an entry by opening an issue with the `pick-of-the-week` label.*
 
-## The catalog
+## The catalog: verified Agent Plugins
 
 > **Adoption reality check — verified 2026-08-17.** We scanned the manifests of 34 major vendor skill/MCP
 > repositories. Most ship **per-client** manifests — `.claude-plugin/`, `.cursor-plugin/`, `.codex-plugin/`,
@@ -222,7 +228,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 - [dodopayments](https://github.com/dodopayments/dodo-agent-plugin) by [Dodo Payments](https://docs.dodopayments.com) — official Dodo Payments plugin: 17 integration skills (checkout, subscriptions, billing, refunds) plus API and docs MCP servers. **[production]**
 - [open-market-data](https://github.com/anotb/open-market-data) by [anotb](https://github.com/anotb) — read-only stock, SEC, crypto and macroeconomic data with normalized provenance. **[production]**
 
-## Skills & MCP servers ready to be packaged
+## Agent Skills and MCP servers ready to be packaged as plugins
 
 The Agent Plugins ecosystem is eleven days old at the time of writing, so most of the world's best Agent Skills
 and MCP servers **aren't plugins yet** — they just need a `plugin.json` dropped on top. This section is not
@@ -242,7 +248,7 @@ catalog above (via PR — see [Contributing](#-contributing)).
 *Sentry graduated out of this section on 2026-08-17 — `getsentry/sentry-for-ai` now ships a compliant
 `plugin.json` and is listed in the catalog above. TranscriptAPI, Zillapi and StayingAPI graduated earlier.*
 
-## Tools
+## Tools: validate and scaffold a plugin
 
 - [`ajv-cli`](https://github.com/ajv-validator/ajv-cli) against the canonical schemas — the validation one-liner multiple plugin authors in the catalog above ship in their own CI:
   ```bash
@@ -256,7 +262,7 @@ catalog above (via PR — see [Contributing](#-contributing)).
 *This section is intentionally short. If you maintain a standalone Agent Plugins validator, linter, or
 scaffolder, open a PR — it's an empty niche and first-mover here is real.*
 
-## Spec & resources
+## Agent Plugins spec and resources
 
 - [Agent Plugins — spec site](https://agentplugins.codes/)
 - [agentplugins/agent-plugins-spec](https://github.com/agentplugins/agent-plugins-spec) — spec text, schemas, governance
@@ -284,6 +290,16 @@ PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the format a
 Our own entries follow the exact same format and bar as everyone else's, appear at most once per category, and
 we never reject a competing entry to protect ours — see the disclosure section of CONTRIBUTING.md for the full
 policy.
+
+---
+
+## Related lists
+
+Three sister lists, same standard, same maintainer. Each one covers a different agent ecosystem.
+
+- [awesome-hermes-skills](https://github.com/ZeroPointRepo/awesome-hermes-skills): skills, plugins, agent profiles and memory providers for Hermes Agent.
+- [awesome-grok-bot](https://github.com/ZeroPointRepo/awesome-grok-bot): skills, plugins and MCP wiring for xAI and Cursor's Grok Bot.
+- [awesome-dsh-usecases](https://github.com/ZeroPointRepo/awesome-dsh-usecases): what people actually build with DeepSeek Harness, each entry with a working install command.
 
 ---
 
