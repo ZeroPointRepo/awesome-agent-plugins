@@ -287,9 +287,6 @@ Report a plugin that misbehaves via [an issue](../../issues/new/choose) and we'l
 PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the format and the four acceptance rules.
 **Disclosure:** the maintainer of this list also builds some of the tools listed in it
 ([TranscriptAPI](https://transcriptapi.com), [StayingAPI](https://stayingapi.com), [Zillapi](https://zillapi.com)).
-Our own entries follow the exact same format and bar as everyone else's, appear at most once per category, and
-we never reject a competing entry to protect ours — see the disclosure section of CONTRIBUTING.md for the full
-policy.
 
 ---
 
