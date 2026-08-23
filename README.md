@@ -289,11 +289,12 @@ PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the format a
 
 ## Related lists
 
-Three sister lists, same standard, same maintainer. Each one covers a different agent ecosystem.
+Sister lists, same standard, same maintainer. Each one covers a different agent ecosystem.
 
 - [awesome-hermes-skills](https://github.com/ZeroPointRepo/awesome-hermes-skills): skills, plugins, agent profiles and memory providers for Hermes Agent.
 - [awesome-grok-bot](https://github.com/ZeroPointRepo/awesome-grok-bot): skills, plugins and MCP wiring for xAI and Cursor's Grok Bot.
 - [awesome-dsh-usecases](https://github.com/ZeroPointRepo/awesome-dsh-usecases): what people actually build with DeepSeek Harness, each entry with a working install command.
+- [awesome-fx-skills](https://github.com/ZeroPointRepo/awesome-fx-skills): skills, MCP servers and subagents for Vercel's fx coding agent, every install command machine-checked weekly.
 
 ---
 
