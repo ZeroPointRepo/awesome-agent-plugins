@@ -4,20 +4,18 @@ Thanks for considering a contribution. This list exists to be the accurate refer
 so we're strict about verification but fast about merging — the goal is under 7 days to a first response on
 every PR.
 
-## Disclosure
+## Entries from ZeroPointRepo
 
-The maintainer of this repository builds and sells developer tools — [TranscriptAPI](https://transcriptapi.com)
-(YouTube search & transcripts), [StayingAPI](https://stayingapi.com) (hotel/vacation-rental data), and
-[Zillapi](https://zillapi.com) (US property data) — and may list them here when they ship a genuinely working
-plugin, skill, or MCP server. When we do:
+Some entries in this list are built by ZeroPointRepo: `transcriptapi`, `zillapi` and `stayingapi`, each in a
+different category. They are held to the same rules as every other entry, and to a higher bar on one point:
 
-- Our entries appear **at most once per category**, in the exact same format as every other entry — no bold, no
-  emoji, no "featured" styling, placed alphabetically.
-- Our entries are held to a **higher** bar than contributed ones: if it doesn't have a working manifest and a
-  real README, it doesn't go in.
-- We will **never reject or downrank a competing entry** to protect one of ours.
-- If you ever think one of our entries doesn't belong, open an issue — we'll take it as seriously as any other
-  broken-entry report.
+- Same entry format as everyone else. No bold, no emoji, no "featured" styling, placed alphabetically.
+- At most one per category.
+- A higher acceptance bar: no working manifest and a real README, it does not go in.
+- A competing entry is never rejected or downranked to protect one of ours.
+
+If you ever think one of those entries does not belong, open an issue. We will take it as seriously as any
+other broken-entry report.
 
 ## Adding an entry to the catalog
 
