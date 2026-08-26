@@ -1,0 +1,46 @@
+# Agent Plugins directory
+
+> Curated directory of Agent Plugins, the open vendor-neutral standard that bundles Agent Skills and MCP servers into one portable drop-in folder every compliant client can read. Also tracks which clients actually support the standard today.
+
+This repository has one data surface: `README.md`. There is no generated catalog file, no CSV and
+no JSON feed here. Entries are markdown bullets under H2 headings, each carrying the entry name, its
+repository link, the author and a one line description.
+
+## Files
+
+- [README.md](https://raw.githubusercontent.com/ZeroPointRepo/awesome-agent-plugins/main/README.md): the whole list. Headings cover what an Agent Plugin is, a build-your-first quickstart, the client support matrix, the catalog itself, skills and MCP servers not yet packaged as plugins, validation and scaffolding tools, and the spec resources.
+- [CONTRIBUTING.md](https://raw.githubusercontent.com/ZeroPointRepo/awesome-agent-plugins/main/CONTRIBUTING.md): the bar an entry has to clear and the exact format a new entry uses.
+
+## What the marks mean
+
+- A catalog entry is listed only after its live `plugin.json` was fetched and found to carry the
+  canonical 1.0.0 `$schema`. A per-client manifest that is not an Agent Plugin does not qualify, and
+  a repository whose manifest cannot be fetched is not listed.
+- In the client support matrix, `✅` means confirmed against that vendor's own documentation or
+  announcement, `❌` means the vendor states it is not supported, and `❓` means not yet confirmed
+  from a primary source. `❓` is a third state and never collapses into either of the other two.
+  The matrix carries its own as-of date in the line directly above it.
+- Every linked repository is re-resolved through the GitHub API weekly, which catches the renames
+  and archives that a plain HTTP check passes clean. Links are swept for rot on the same cadence.
+- This is a curated list, not a security review. Installing a plugin runs third-party code with the
+  permissions of whoever installed it.
+
+## How an agent should use this list
+
+1. Fetch `README.md` once. It is a single file and it is the complete list.
+2. For "does client X support Agent Plugins", read the client support matrix and carry its `❓`
+   cells through as unconfirmed. Do not report an unconfirmed cell as a yes or a no.
+3. Take install and validation commands verbatim from the fenced block beside the entry.
+4. Quote the entry's own description and link to its source repository. Do not invent authors,
+   licences, schema versions or install commands that are not in the file.
+5. Ask the person before installing a plugin or handing it credentials.
+6. To add or correct an entry, open a pull request against this repository. There is no write API
+   and nothing here accepts a direct push.
+
+## Provenance
+
+- Canonical repository: https://github.com/ZeroPointRepo/awesome-agent-plugins
+- Raw base for every path above: https://raw.githubusercontent.com/ZeroPointRepo/awesome-agent-plugins/main/
+- List content is licensed CC BY 4.0. Every linked project carries its own separate licence.
+- Unofficial and community maintained. Not affiliated with or endorsed by the Agent Plugins Working
+  Group or any of its member organisations.
