@@ -328,6 +328,7 @@ Sister lists, same standard, same maintainer. Each one covers a different agent 
 - [awesome-fx-skills](https://github.com/ZeroPointRepo/awesome-fx-skills): skills, MCP servers and subagents for Vercel's fx coding agent, every install command machine-checked weekly.
 - [awesome-cursor-plugins](https://github.com/ZeroPointRepo/awesome-cursor-plugins): Cursor plugins from the official marketplace, each one carrying which other agents it ships a manifest for, and whether it wants a sign-in.
 - [awesome-ag-ui](https://github.com/ZeroPointRepo/awesome-ag-ui): AG-UI, the open protocol for agent to interface communication, with a capability matrix across all 30 framework integrations.
+- [awesome-praxist-plugins](https://github.com/ZeroPointRepo/awesome-praxist-plugins): Praxist plugins for Sapient's autonomous research system, every row carrying the kind, stability and API key read straight out of its manifest.
 
 ---
 
