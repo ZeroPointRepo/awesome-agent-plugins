@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/plugins-45-blueviolet" alt="Plugin count" />
+  <img src="https://img.shields.io/badge/plugins-48-blueviolet" alt="Plugin count" />
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-agent-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/spec-v1.0.0%20verified%20%C2%B7%20v1.1.0%20draft-informational" alt="Spec version" />
   <img src="https://img.shields.io/badge/status-unofficial-lightgrey" alt="Unofficial, not affiliated with the Agent Plugins Working Group" />
@@ -192,12 +192,13 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 ### Dev & Coding
 
+- [AtomLane](https://github.com/cloudguo123/atomlane) by [cloudguo123](https://github.com/cloudguo123) — proven-safe atomic planning and resource-aware local concurrency for coding agents on macOS. **[beta]**
 - [b2c](https://github.com/SalesforceCommerceCloud/b2c-developer-tooling/tree/main/skills/b2c) by [Salesforce Commerce Cloud](https://github.com/SalesforceCommerceCloud) — B2C Commerce development skills, including custom API guides and a Figma-to-Page-Designer converter. **[production]**
 - [csharp-dotnet-development](https://github.com/github/awesome-copilot/tree/main/plugins/csharp-dotnet-development) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — C#/.NET prompts, instructions and chat modes for testing, docs and best practices. **[production]**
-- [AtomLane](https://github.com/cloudguo123/atomlane) by [cloudguo123](https://github.com/cloudguo123) — proven-safe atomic planning and resource-aware local concurrency for coding agents on macOS. **[beta]**
 - [daisyui](https://github.com/saadeghi/daisyui) by [saadeghi](https://github.com/saadeghi) — the official daisyUI component-library plugin for building Tailwind CSS interfaces. **[production]**
 - [diffusers](https://github.com/huggingface/diffusers/tree/main/.ai) by [Hugging Face](https://huggingface.co) — contribution conventions and task skills for the diffusers library, shipped in the library's own repo. **[production]**
 - [magpie](https://github.com/apache/magpie) by [Apache Software Foundation](https://github.com/apache) — a governance-agnostic framework of agentic skills for maintaining open-source projects. **[production]**
+- [sandbase-harness](https://github.com/sandbaseai/sandbase-harness/tree/main/agent-plugin) by [SandBase AI](https://github.com/sandbaseai) — stdio MCP bridge to a self-hosted SandBase Harness runtime, with durable sessions, sandboxed execution, artifacts and replay. **[beta]**
 - [swiftui-expert](https://github.com/AvdLee/SwiftUI-Agent-Skill) by [Antoine van der Lee](https://www.avanderlee.com) — expert SwiftUI guidance for state management, view composition, performance and iOS 26+ Liquid Glass adoption. **[production]**
 - [testing-automation](https://github.com/github/awesome-copilot/tree/main/plugins/testing-automation) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — unit, integration and end-to-end testing plus TDD workflows. **[production]**
 - [vuetify-mcp](https://github.com/vuetifyjs/mcp) by [Vuetify](https://vuetifyjs.com) — the official hosted Vuetify MCP: component docs, APIs, bins and playgrounds. **[production]**
