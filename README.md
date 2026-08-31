@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
-  <img src="https://img.shields.io/badge/plugins-48-blueviolet" alt="Plugin count" />
+  <!-- count:badge --><img src="https://img.shields.io/badge/plugins-48-blueviolet" alt="Plugin count" /><!-- /count:badge -->
   <img src="https://img.shields.io/github/last-commit/ZeroPointRepo/awesome-agent-plugins" alt="Last commit" />
   <img src="https://img.shields.io/badge/spec-v1.0.0%20verified%20%C2%B7%20v1.1.0%20draft-informational" alt="Spec version" />
   <img src="https://img.shields.io/badge/status-unofficial-lightgrey" alt="Unofficial, not affiliated with the Agent Plugins Working Group" />
@@ -13,7 +13,7 @@
 
 # Awesome Agent Plugins
 
-**A curated, verified directory of 33 Agent Plugins.** [Agent Plugins](https://agentplugins.codes/) is the
+**A curated, verified directory of <!-- count:lede -->48<!-- /count:lede --> Agent Plugins.** [Agent Plugins](https://agentplugins.codes/) is the
 open, vendor-neutral standard published on 2026-08-06 by Amazon, Anysphere/Cursor, GitHub, Microsoft, OpenAI
 and Vercel, with Google as a core maintainer. It bundles **Agent Skills and MCP servers** into one portable,
 drop-in folder that every compliant client can read.
@@ -263,7 +263,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 ## Agent Skills and MCP servers ready to be packaged as plugins
 
-The Agent Plugins ecosystem is eleven days old at the time of writing, so most of the world's best Agent Skills
+The Agent Plugins standard only published on 2026-08-06, so most of the world's best Agent Skills
 and MCP servers **aren't plugins yet** — they just need a `plugin.json` dropped on top. This section is not
 the catalog above: nothing here has shipped a compliant manifest. It's a punch list of high-quality, real,
 maintained skills/MCP servers that would make excellent plugins. Once one of these ships a `plugin.json`,

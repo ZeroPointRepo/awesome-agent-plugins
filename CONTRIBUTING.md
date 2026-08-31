@@ -1,8 +1,8 @@
 # Contributing to Awesome Agent Plugins
 
-Thanks for considering a contribution. This list exists to be the accurate reference for a six-day-old spec,
-so we're strict about verification but fast about merging — the goal is under 7 days to a first response on
-every PR.
+Thanks for considering a contribution. This list exists to be the accurate reference for a spec published on
+2026-08-06, so we're strict about verification but fast about merging — the goal is under 7 days to a first
+response on every PR.
 
 ## Entries from ZeroPointRepo
 
@@ -32,6 +32,11 @@ Open a PR that adds one line, in the right category, alphabetically, in this exa
 - description — one line, plain, no marketing language. Say what it does, not why it's great.
 - `tag` — one of `production` (used in the wild), `beta`, `experimental`, or `reference` (spec text/examples,
   not meant to run standalone).
+
+**Do not update the plugin count.** The badge and the line under the title both sit between
+`<!-- count:… -->` markers and are rewritten from the catalog itself by
+`.github/scripts/sync-counts.mjs`. Add your entry and leave the numbers alone — CI corrects them when your
+PR merges. (They drifted apart, 48 against 33, precisely because they used to be typed by hand.)
 
 ### Acceptance bar (we merge if all four are true)
 

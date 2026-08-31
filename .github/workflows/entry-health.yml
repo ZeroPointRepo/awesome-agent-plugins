@@ -10,6 +10,12 @@ name: Entry health
 # Link rot is not a contributor's fault and must not block their PR.
 
 on:
+  # A merged entry corrects the counts immediately instead of waiting up to seven days for
+  # the weekly run. Count-sync only on this trigger — the API walk below is skipped, so a
+  # merge never spends the REST budget. No new cron; a push trigger allocates no minute.
+  push:
+    branches: [main]
+    paths: ["README.md"]
   schedule:
     # Off the hour deliberately. :00 is the most contended slot on GitHub's scheduler and runs
     # there are silently DROPPED under load — this portfolio lost every scheduled run for a full
@@ -20,7 +26,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write # the count sync commits README.md when the catalog moved
   issues: write
 
 # One walk at a time, per repo. Every scheduled workflow here walks the same catalog through the
@@ -46,18 +52,38 @@ jobs:
         with:
           node-version: "20"
 
+      # This repo has no catalog generator (README is the only data surface), so the counts
+      # ride the one job that already walks the README weekly rather than earning a second
+      # cron. Runs FIRST: it is cheap, it needs no token, and a rate-limited API walk must
+      # not be able to stop the counts from being corrected.
+      - name: Sync the plugin counts from the catalog
+        id: counts
+        run: node .github/scripts/sync-counts.mjs
+
+      - name: Commit corrected counts
+        if: steps.counts.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs: sync plugin count to ${{ steps.counts.outputs.count }} [skip ci]"
+          git push
+
+      # Everything below is the API walk. Skipped on push: a merge should not spend the REST
+      # budget, and the report file the later steps read only exists once this step has run.
       - name: Resolve every linked repo through the GitHub API
         id: check
+        if: github.event_name != 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/scripts/entry-health.mjs README.md CONTRIBUTING.md
 
       - name: Add result to the run summary
-        if: always()
+        if: always() && steps.check.outcome != 'skipped'
         run: cat entry-health-report.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Open or update the entry-health issue
-        if: steps.check.outputs.findings != '0'
+        if: steps.check.outcome == 'success' && steps.check.outputs.findings != '0'
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: "🔁 Renamed, archived or deleted entries found"
