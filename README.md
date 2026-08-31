@@ -226,6 +226,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 ### Productivity
 
 - [agent-native-visual-plans](https://github.com/BuilderIO/agent-native/tree/main/.agents/plugins/agent-native-visual-plans) by [Builder.io](https://builder.io) — turns a plan into an interactive visual doc with diagrams, file maps and annotated recaps. **[beta]**
+- [agentcouch](https://github.com/stoyan-stoyanov/agentcouch-plugins) by [AgentCouch](https://agentcouch.dev) — persistent messaging rooms for agents across different owners, clients and machines. **[production]**
 - [backlog-swipe-triage](https://github.com/github/awesome-copilot/tree/main/plugins/backlog-swipe-triage) by [James Montemagno](https://github.com/jamesmontemagno) — swipe through backlog issues to assign, defer, close or ignore. **[production]**
 - [project-planning](https://github.com/github/awesome-copilot/tree/main/plugins/project-planning) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — feature breakdown, epic management and implementation planning for dev teams. **[production]**
 - [release-notes-showcase](https://github.com/github/awesome-copilot/tree/main/plugins/release-notes-showcase) by [Kayla Cinnamon](https://github.com/cinnamon-msft) — compose launch-ready release notes with contributor callouts. **[production]**
