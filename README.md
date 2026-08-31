@@ -194,6 +194,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 - [b2c](https://github.com/SalesforceCommerceCloud/b2c-developer-tooling/tree/main/skills/b2c) by [Salesforce Commerce Cloud](https://github.com/SalesforceCommerceCloud) — B2C Commerce development skills, including custom API guides and a Figma-to-Page-Designer converter. **[production]**
 - [csharp-dotnet-development](https://github.com/github/awesome-copilot/tree/main/plugins/csharp-dotnet-development) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — C#/.NET prompts, instructions and chat modes for testing, docs and best practices. **[production]**
+- [AtomLane](https://github.com/cloudguo123/atomlane) by [cloudguo123](https://github.com/cloudguo123) — proven-safe atomic planning and resource-aware local concurrency for coding agents on macOS. **[beta]**
 - [daisyui](https://github.com/saadeghi/daisyui) by [saadeghi](https://github.com/saadeghi) — the official daisyUI component-library plugin for building Tailwind CSS interfaces. **[production]**
 - [diffusers](https://github.com/huggingface/diffusers/tree/main/.ai) by [Hugging Face](https://huggingface.co) — contribution conventions and task skills for the diffusers library, shipped in the library's own repo. **[production]**
 - [magpie](https://github.com/apache/magpie) by [Apache Software Foundation](https://github.com/apache) — a governance-agnostic framework of agentic skills for maintaining open-source projects. **[production]**
