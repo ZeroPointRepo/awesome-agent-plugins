@@ -90,6 +90,12 @@ jobs:
           content-filepath: ./entry-health-report.md
           labels: broken-entry, automated
 
+      # Gated on the walk having actually run. An empty `findings` output compares equal to '0'
+      # under GitHub's loose comparison, so on the count-sync-only push path this step fired and
+      # announced a clean entry-health result for a run that resolved zero repositories. A run
+      # that checked nothing must never be indistinguishable from a run that checked everything
+      # and found nothing — that is the same rule entry-health.mjs enforces with its "Not checked"
+      # section, and it applies to the workflow that calls it.
       - name: Report clean run
-        if: steps.check.outputs.findings == '0'
+        if: steps.check.outcome == 'success' && steps.check.outputs.findings == '0'
         run: echo "No renamed, archived or deleted entries."
