@@ -60,13 +60,46 @@ jobs:
         id: counts
         run: node .github/scripts/sync-counts.mjs
 
-      - name: Commit corrected counts
-        if: steps.counts.outputs.changed == 'true'
+      - name: Re-resolve every entry against its canonical name
+        # SECURITY, not hygiene. When a repository is renamed or transferred, the old path keeps
+        # redirecting until somebody claims the vacated name; from that moment every link we
+        # publish points at whoever took it, and nothing looks broken in the meantime because the
+        # redirect returns 200 the whole time. Keyed by IMMUTABLE repository id: resolving the
+        # slug follows the redirect, so once a squatter holds the old name a slug-keyed lookup
+        # returns the squatter and confirms our stale link as canonical.
+        # Skipped on push for the same reason as the health walk below: a merge must not spend
+        # the REST budget. It runs before the health walk so a rename is FIXED in the same pass
+        # that would otherwise only report it.
+        if: github.event_name != 'push'
+        # continue-on-error, not `if: always()` on everything downstream: a walk that could not
+        # establish 95% of its facts exits non-zero on purpose, and that must show as a failed
+        # step. It must not also cancel the catalog rebuild underneath it — the two read
+        # different sources and a REST hiccup in one is not a reason to publish nothing.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/resolve-names.mjs README.md CONTRIBUTING.md
+
+      - name: Add the canonical-name result to the run summary
+        # A silent clean run and a silent broken run look identical. The report always says how
+        # many were resolved by immutable id, how many by slug, and how many were not established.
+        if: always()
+        run: cat canonical-names-report.md >> "$GITHUB_STEP_SUMMARY" || true
+
+      - name: Commit corrected counts and canonical names
+        # Deliberately NOT gated on the count step alone: a canonical-name rewrite with no count
+        # change would have been computed, discarded and recomputed next week, forever.
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "docs: sync plugin count to ${{ steps.counts.outputs.count }} [skip ci]"
+          TRACKED="README.md CONTRIBUTING.md .github/data/repo-ids.json"
+          if git diff --quiet -- $TRACKED; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git add $TRACKED
+          git commit -m "chore: sync counts and re-resolve canonical entry names [skip ci]"
           git push
 
       # Everything below is the API walk. Skipped on push: a merge should not spend the REST

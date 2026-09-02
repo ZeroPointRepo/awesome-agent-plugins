@@ -2,3 +2,7 @@
 # step summary / issue body. A committed copy is never regenerated, so it just sits in the repo
 # going stale — which is the exact class of bug the count markers exist to kill.
 entry-health-report.md
+
+# Written fresh by .github/scripts/resolve-names.mjs on every run and read straight into the step
+# summary. A committed copy is never regenerated, so it would sit in the repo going stale.
+canonical-names-report.md
