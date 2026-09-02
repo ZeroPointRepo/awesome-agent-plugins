@@ -277,6 +277,8 @@ it graduates to the catalog above (via PR — see [Contributing](#-contributing)
 - [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) by [Microsoft](https://github.com/microsoft) — Playwright-driven browser control MCP server. **[mcp]**
 - [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) by [Model Context Protocol](https://github.com/modelcontextprotocol) — the official reference MCP server collection; the other half of most future plugins. **[mcp]**
 
+- [bulkpublish-social-media-content-skills](https://github.com/azeemkafridi/bulkpublish-api/tree/main/skills/social-media-content-skills) by [BulkPublish](https://github.com/azeemkafridi) — adapt, review, schedule, and publish approved social-media content through the BulkPublish API or hosted MCP. **[skills]**
+
 *Sentry graduated out of this section on 2026-08-17 — `getsentry/sentry-for-ai` now ships a compliant
 `plugin.json` and is listed in the catalog above. TranscriptAPI, Zillapi and StayingAPI graduated earlier.*
 
