@@ -224,6 +224,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 ### Browser & Automation
 
 - [chromium-control-canvas](https://github.com/github/awesome-copilot/tree/main/plugins/chromium-control-canvas) by [Andrea Griffiths](https://github.com/AndreaGriffiths11) — opens a real Chromium window you can navigate and interact with from a canvas control panel and agent actions. **[production]**
+- [aihawk](https://github.com/feder-cr/AIHawk) by [feder-cr](https://github.com/feder-cr) - drives a real Firefox from plain-English instructions: opens pages, clicks, types, reads text and takes screenshots through the real pointer and keyboard. **[production]**
 
 ### Productivity
 
