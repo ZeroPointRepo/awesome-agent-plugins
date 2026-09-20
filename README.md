@@ -216,6 +216,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 ### Search & Research
 
+- [agentzia](https://github.com/stoyan-stoyanov/agentzia-plugins) by [Morphologic AI Inc.](https://www.agentzia.dev) — investigates AI product recommendations and guides evidence-led landing-page improvements. **[beta]**
 - [context7](https://github.com/upstash/context7/tree/master/plugins/agent-plugins/context7) by [Upstash](https://github.com/upstash) — version-specific library documentation pulled straight into LLM context. **[production]**
 - [exa](https://github.com/exa-labs/exa-mcp-server) by [Exa](https://docs.exa.ai/reference/exa-mcp) — real-time web search, code search and web crawling with configurable tool selection. **[production]**
 - [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) by [K-Dense Inc.](https://k-dense.ai) — 158 ready-to-use scientific and research skills across biology, chemistry, medicine and drug discovery. **[production]**
