@@ -269,7 +269,7 @@ the catalog above: nothing here has shipped a compliant manifest. It's a punch l
 maintained skills/MCP servers that would make excellent plugins. Once one of these ships a `plugin.json`,
 it graduates to the catalog above (via PR — see [Contributing](#-contributing)).
 
-- [ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp) by [ahujasid](https://github.com/ahujasid) — control Blender 3D from any LLM. **[mcp]**
+- [ahujasid/mcp-for-blender](https://github.com/ahujasid/mcp-for-blender) by [ahujasid](https://github.com/ahujasid) — control Blender 3D from any LLM. **[mcp]**
 - [anthropics/skills](https://github.com/anthropics/skills) by [Anthropic](https://github.com/anthropics) — the official reference repo for the Agent Skills format that every plugin's `skills/` folder builds on. **[skills]**
 - [browserbase/skills](https://github.com/browserbase/skills) by [Browserbase](https://github.com/browserbase) — official agent skills for driving a real browser via Stagehand; a second Browser & Automation plugin candidate. **[mcp]**
 - [cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare) by [Cloudflare](https://github.com/cloudflare) — manage Cloudflare resources (Workers, KV, R2, DNS) from an agent. **[mcp]**
