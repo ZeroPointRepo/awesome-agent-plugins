@@ -218,6 +218,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 - [context7](https://github.com/upstash/context7/tree/master/plugins/agent-plugins/context7) by [Upstash](https://github.com/upstash) — version-specific library documentation pulled straight into LLM context. **[production]**
 - [exa](https://github.com/exa-labs/exa-mcp-server) by [Exa](https://docs.exa.ai/reference/exa-mcp) — real-time web search, code search and web crawling with configurable tool selection. **[production]**
+- [mcp-trendpulse](https://github.com/AKzar1el/mcp-trendpulse) by [Tomi Šeregi](https://tomiseregi.si) - Google Trends and Google News research for keyword, market and demand analysis. **[beta]**
 - [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) by [K-Dense Inc.](https://k-dense.ai) — 158 ready-to-use scientific and research skills across biology, chemistry, medicine and drug discovery. **[production]**
 - [stayingapi](https://github.com/stayingapi/hotel-vacation-rental-mcp) by [StayingAPI](https://stayingapi.com) — search, availability, pricing and cross-OTA price comparison across Airbnb, Booking.com, Vrbo and Google Hotels. **[production]**
 
