@@ -85,6 +85,10 @@
       "id": 1000362065,
       "full_name": "github/awesome-copilot"
     },
+    "googlecloudplatform/data-agent-kit-plugin": {
+      "id": 1199601476,
+      "full_name": "GoogleCloudPlatform/data-agent-kit-plugin"
+    },
     "grafana/mcp-grafana": {
       "id": 907869862,
       "full_name": "grafana/mcp-grafana"

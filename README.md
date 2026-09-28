@@ -205,7 +205,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 ### Data & APIs
 
-- [dak](https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack) by [Google](https://github.com/gemini-cli-extensions) — data-engineering skills for Google Cloud: pipeline architecture, dbt transforms, Spark/BigQuery SQL notebooks. **[production]**
+- [dak](https://github.com/GoogleCloudPlatform/data-agent-kit-plugin) by [Google](https://github.com/gemini-cli-extensions) — data-engineering skills for Google Cloud: pipeline architecture, dbt transforms, Spark/BigQuery SQL notebooks. **[production]**
 - [database-data-management](https://github.com/github/awesome-copilot/tree/main/plugins/database-data-management) by [Awesome Copilot Community](https://github.com/github/awesome-copilot) — PostgreSQL/SQL Server administration, optimization and data-management guidance. **[production]**
 - [hindsight](https://github.com/vectorize-io/hindsight/tree/main/hindsight-integrations/agent-plugin) by [Vectorize](https://hindsight.vectorize.io) — long-term agent memory (retain/recall/reflect) exposed as portable MCP tools. **[production]**
 - [neon-postgres](https://github.com/neondatabase/agent-skills) by [Neon](https://neon.com) — manage a Neon serverless Postgres backend: branching, object storage, functions, AI Gateway. **[production]**
