@@ -274,6 +274,7 @@ it graduates to the catalog above (via PR — see [Contributing](#-contributing)
 - [browserbase/skills](https://github.com/browserbase/skills) by [Browserbase](https://github.com/browserbase) — official agent skills for driving a real browser via Stagehand; a second Browser & Automation plugin candidate. **[mcp]**
 - [cloudflare/mcp-server-cloudflare](https://github.com/cloudflare/mcp-server-cloudflare) by [Cloudflare](https://github.com/cloudflare) — manage Cloudflare resources (Workers, KV, R2, DNS) from an agent. **[mcp]**
 - [grafana/mcp-grafana](https://github.com/grafana/mcp-grafana) by [Grafana Labs](https://github.com/grafana) — query dashboards, alerts and datasources via MCP. **[mcp]**
+- [louis030195/hyperconsciousness](https://github.com/louis030195/hyperconsciousness) by [Louis Beaumont](https://github.com/louis030195) — Developer-alpha encrypted knowledge store with scoped, expiring MCP access. **[mcp]**
 - [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) by [Microsoft](https://github.com/microsoft) — Playwright-driven browser control MCP server. **[mcp]**
 - [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) by [Model Context Protocol](https://github.com/modelcontextprotocol) — the official reference MCP server collection; the other half of most future plugins. **[mcp]**
 
