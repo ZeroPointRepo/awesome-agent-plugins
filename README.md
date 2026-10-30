@@ -276,6 +276,7 @@ it graduates to the catalog above (via PR — see [Contributing](#-contributing)
 - [grafana/mcp-grafana](https://github.com/grafana/mcp-grafana) by [Grafana Labs](https://github.com/grafana) — query dashboards, alerts and datasources via MCP. **[mcp]**
 - [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) by [Microsoft](https://github.com/microsoft) — Playwright-driven browser control MCP server. **[mcp]**
 - [modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) by [Model Context Protocol](https://github.com/modelcontextprotocol) — the official reference MCP server collection; the other half of most future plugins. **[mcp]**
+- [SergiuPogor/curlshot-mcp](https://github.com/SergiuPogor/curlshot-mcp) by [SergiuPogor](https://github.com/SergiuPogor) — hosted MCP server that returns screenshots of public web pages as PNG, JPEG, WebP, PDF or video. **[mcp]**
 
 *Sentry graduated out of this section on 2026-08-17 — `getsentry/sentry-for-ai` now ships a compliant
 `plugin.json` and is listed in the catalog above. TranscriptAPI, Zillapi and StayingAPI graduated earlier.*
