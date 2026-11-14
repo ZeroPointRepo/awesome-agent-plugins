@@ -245,6 +245,7 @@ Tags: **production** (used in the wild) · **beta** · **experimental** · **ref
 
 ### Content & Media
 
+- [juzpost](https://github.com/juzpost/juzpost-agent/tree/main/chatgpt) by [InLads LLC](https://www.juzpost.com) — drafts, schedules and publishes social media posts to YouTube, Instagram, TikTok, X, LinkedIn and 6 more platforms via JuzPost's remote MCP server. **[production]**
 - [remotion](https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin) by [Remotion](https://remotion.dev) — programmatic video: animation, audio, captions and 3D compositing, from the Remotion repo itself. **[production]**
 - [skill-image-gen](https://github.com/github/awesome-copilot/tree/main/plugins/skill-image-gen) by [adamd9](https://github.com/adamd9) — AI image generation (OpenAI gpt-image-2, Google Gemini) from inside your coding workflow, BYO API key. **[production]**
 - [transcriptapi](https://github.com/ZeroPointRepo/youtube-mcp) by [TranscriptAPI](https://transcriptapi.com) — YouTube transcripts, video and channel search, playlist extraction, no API key to manage. **[production]**
